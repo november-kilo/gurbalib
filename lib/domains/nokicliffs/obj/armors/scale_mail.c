@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 void setup(void) {
    set_id("scale mail");
@@ -10,9 +10,5 @@ void setup(void) {
       "tested. It is still in a condition that makes it " +
       "suitable for most adventurers.");
 
-   set_slot("body");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
-   set_ac(1);
+   set_medium();
 }

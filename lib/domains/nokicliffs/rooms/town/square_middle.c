@@ -21,6 +21,7 @@ int do_drop_sea_shell(string str) {
          if (!this_player()->present("beads")) {
             beads = clone_object(NOKICLIFFS_DIMENSIONAL_BEADS);
             beads->setup();
+            beads->set_owner_name(this_player());
             beads->move(this_player());
             write("You have been rewarded with a string of dimensional " +
                "beads.");

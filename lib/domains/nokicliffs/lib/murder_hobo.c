@@ -1,6 +1,6 @@
 #include "../domain.h"
 
-inherit "/std/monster";
+inherit DIR + "/lib/monster";
 inherit "/std/modules/m_triggers";
 
 int is_murder_hobo(void) {
@@ -47,12 +47,4 @@ void equip_murder_hobo(string *equip, varargs string coin, int x, int y) {
    }
 
    add_coins(coin, x + random(y));
-}
-
-void create(void) {
-   ::create();
-   set_level(1);
-   set_hit_skill("combat/unarmed");
-   set_skill("combat/unarmed", 50);
-   set_skill("combat/defense", 100);
 }

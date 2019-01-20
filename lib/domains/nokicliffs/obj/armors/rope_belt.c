@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 void setup(void) {
    set_id("belt", "rope belt");
@@ -12,8 +12,4 @@ void setup(void) {
    set_remove_message("$N $vuntie $o.");
 
    set_slot("waist");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
-   set_ac(0);
 }

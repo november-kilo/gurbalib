@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 string query_short(void) {
    string str;
@@ -22,10 +22,7 @@ void setup(void) {
       "causing slight, ever so slight, changes in the hauberk's hues. " +
       "The meanings of which are known only to the immortals and the " +
       "ancient smiths who forged this armor in the outer planes.");
-   set_slot("body");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
+   set_medium();
    set_ac(100);
 
    add_action("set_ac_cmd", "ac");

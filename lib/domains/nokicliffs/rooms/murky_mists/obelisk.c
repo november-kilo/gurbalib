@@ -14,5 +14,11 @@ void setup(void) {
       "south" : DIR + "/rooms/murky_mists/before_obelisk.c"
    ]));
 
+   add_item("obelisk", "The top of the obelisk disappears " +
+      "into the mysterious myst, but what you can make " +
+      "out from the markings on the obelisk is that it " +
+      "tells a story about two women on a dragon hunt on " +
+      "one of the outer planes.");
+
    set_objects(DIR + "/monsters/swamp_beast.c");
 }

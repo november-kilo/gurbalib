@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 #define DEFAULT_CLOAK_AC 2
 #define POWERED_CLOAK_AC 10
@@ -89,10 +89,7 @@ void setup(void) {
       "at the bottom from years of use. Do not be fooled, " +
       "however, as this is not your standard issue hooded " +
       "cloak.");
-   set_slot("body");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
+   set_ultra_light();
    set_ac(DEFAULT_CLOAK_AC);
 
    add_action("do_cloak_power", "cloak");

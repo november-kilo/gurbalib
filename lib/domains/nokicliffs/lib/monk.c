@@ -1,6 +1,6 @@
 #include "../domain.h"
 
-inherit "/std/monster";
+inherit DIR + "/lib/monster";
 
 static nomask void clothe(void) {
    equip_monster(({

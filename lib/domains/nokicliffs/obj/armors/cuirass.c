@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 int magical_properties_active;
 int bonus;
@@ -13,11 +13,7 @@ void setup(void) {
       "seems to have some magical properties imbued into it but the " +
       "precise nature of them are known only to the ancient forgers " +
       "and the immortals.");
-   set_slot("torso");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
-   set_ac(1);
+   set_medium();
 }
 
 int query_magical_properties_active(void) {

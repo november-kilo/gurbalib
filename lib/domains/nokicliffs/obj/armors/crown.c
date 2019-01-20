@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 void setup(void) {
    set_id("crown");
@@ -10,11 +10,7 @@ void setup(void) {
       " It is a simple crown of metal but you know that it's ancient " +
       "and has rested upon the heads of champions throughout the " +
       "ages.");
-   set_slot("head");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
-   set_ac(1);
+   set_helmet();
 }
 
 void after_wear(object player) {

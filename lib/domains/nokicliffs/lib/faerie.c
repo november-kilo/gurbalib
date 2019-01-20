@@ -4,7 +4,7 @@ inherit "/std/monster";
 
 #define INTERVAL 10
 static string *acts;
-static int     count;
+static int count;
 
 void do_extra_actions(void) {
    count++;

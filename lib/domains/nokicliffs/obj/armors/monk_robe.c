@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/armor";
+inherit DIR + "/lib/armor";
 
 void setup(void) {
    set_id("robe");
@@ -14,9 +14,5 @@ void setup(void) {
    set_wear_message("$N $vput on $o, and $vlook like a monk.");
    set_remove_message("$N $vtake off $o, and no longer $vlook like a monk.");
 
-   set_slot("body");
-   set_value(1);
-   set_size(1);
-   set_weight(1);
-   set_ac(1);
+   set_ultra_light();
 }

@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/monster";
+inherit DIR + "/lib/monster";
 inherit DIR + "/lib/simple_block";
 
 #define INTERVAL 15
@@ -24,10 +24,6 @@ void setup(void) {
    set_short("An animated skeleton");
    set_long("It takes some powerful necromantic magic to animated a " +
       "full skeleton like this.");
-   set_level(50);
-   set_hit_skill("combat/unarmed");
-   set_skill("combat/defense", 1);
-   set_skill("combat/unarmed", 200);
    set_hit_string("punch");
    add_block("up");
 

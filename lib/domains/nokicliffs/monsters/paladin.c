@@ -36,10 +36,6 @@ void setup(void) {
       "long ago lost their light now his soul seeks to rest in " +
       "peace. However, despite this terrible fate, the law is " +
       "still very great within him.");
-   set_level(40);
-   set_skill("combat/defense", 200);
-   set_skill("combat/sharp/medium", 200);
-
    arm();
    add_coins("royal", 1 + random(5));
 }

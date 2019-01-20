@@ -1,6 +1,6 @@
 #include "../domain.h"
 
-inherit "/std/monster";
+inherit DIR + "/lib/monster";
 inherit "/std/modules/m_triggers";
 inherit DIR + "/lib/simple_block";
 
@@ -25,12 +25,6 @@ void setup(void) {
    set_long("A roving bandit. He's certainly not here to help you " +
     "voluntarily.");
    set_race("human");
-   set_aggressive(0);
-   set_level(random(2) + 1);
-   set_hit_skill("combat/sharp/small");
-   set_skill("combat/unarmed", 50);
-   set_skill("combat/sharp/small", 75);
-   set_skill("combat/defense", 100);
    equip();
    add_coins("ducat", 100 + random(100));
 }

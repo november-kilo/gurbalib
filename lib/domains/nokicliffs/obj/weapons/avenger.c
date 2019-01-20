@@ -48,6 +48,9 @@ int bump_hit_points_cmd(string str) {
 
 int consider_cmd(string str) {
    object target;
+   int i, sz;
+   string *skills;
+   string skill_detail;
 
    if (empty_str(str)) {
       write("Consider who, master?");
@@ -59,8 +62,19 @@ int consider_cmd(string str) {
       write(str + " does not appear to be present, master.");
       return 1;
    }
-   write("Master, I consider " + str + " thus: " +
-      target->query_hp() + " hit points.");
+
+   skills = target->query_skills();
+   skill_detail = "\t" + target->query_hit_skill() + "\n";
+   for (i = 0, sz = sizeof(skills); i < sz; i++) {
+      skill_detail += "\t" + skills[i] + ": " +
+            target->query_skill(skills[i]) + "\n";
+   }
+   write("Master, I consider " + str + " thus: " + target->query_hp() +
+      " hit points and " + target->query_mana() + " mana.");
+   write("\tstatus: " + target->query_status() + "\n");
+   write("\tlevel: " + target->query_level() + "\n");
+   write(skill_detail);
+
    return 1;
 }
 

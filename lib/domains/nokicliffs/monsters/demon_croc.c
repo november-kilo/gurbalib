@@ -1,6 +1,6 @@
 #include "../domain.h"
 
-inherit "/std/monster";
+inherit DIR + "/lib/monster";
 
 void targeted_action(string msg, object target, varargs mixed objs ...) {
    if (msg == "$N $vfall to the ground...dead.") {
@@ -16,10 +16,6 @@ void setup(void) {
    set_long("It has terribly sharp teeth and a monstrously " +
       "strong bite. And it is hungry.");
    set_race("demon");
-   set_level(1);
-   set_hit_skill("combat/unarmed");
-   set_skill("combat/defense", 100);
-   set_skill("combat/unarmed", 50);
    set_aggressive(1);
    set_hit_string("bite");
 

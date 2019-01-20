@@ -33,7 +33,7 @@ int summon_demon_croc(void) {
    remove_call_out(search_handle);
    search_handle = 0;
 
-   if (searcher == nil || !present(searcher->query_name())) {
+   if (nilp(searcher) || !present(searcher->query_name())) {
       searcher = nil;
 
       return 0;
@@ -54,7 +54,7 @@ int summon_demon_croc(void) {
 }
 
 private int find_demon_croc(void) {
-   if (searcher == nil || !present(searcher->query_name())) {
+   if (nilp(searcher) || !present(searcher->query_name())) {
       remove_call_out(search_handle);
       search_handle = 0;
       searcher = nil;
@@ -62,7 +62,7 @@ private int find_demon_croc(void) {
       return 0;
    }
 
-   if (!search_interval_handle && demon_croc == nil) {
+   if (!search_interval_handle && nilp(demon_croc)) {
       searcher->targeted_action("$N $vcontinue to fish around...", searcher);
       searcher->message_orig("What's that?!\n");
       search_handle = call_out("summon_demon_croc", SEARCHING_INTERVAL);
@@ -94,7 +94,7 @@ int find_something(void) {
    object the_void;
    object *inv, *gems;
 
-   if (searcher == nil || !present(searcher->query_name())) {
+   if (nilp(searcher) || !present(searcher->query_name())) {
       return 0;
    }
 
