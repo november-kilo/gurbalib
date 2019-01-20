@@ -4,10 +4,8 @@
 #define NOKICLIFFS_START DIR + "/rooms/start.c"
 #define NOKICLIFFS_VOID DIR + "/rooms/void.c"
 #define NOKICLIFFS_DOOMSPIRE_START DIR + "/rooms/doomspire/doomspire_start.c"
-#define NOKICLIFFS_OAK_GROVE_START DIR + "/rooms/oak_grove/oak_grove_start.c"
-#define NOKICLIFFS_CANDYLAND_START DIR + "/rooms/candyland/candyland_start.c"
 #define NOKICLIFFS_MURKY_MISTS_START DIR + "/rooms/murky_mists/murky_mists_start.c"
-#define NOKICLIFFS_ABBEY_START DIR + "/rooms/abbey_of_law/abbey_of_law_start.c"
+#define NOKICLIFFS_ABBEY_START DIR + "/rooms/abbey/abbey_start.c"
 #define NOKICLIFFS_DEN_START DIR + "/rooms/den_of_chaos/den_of_chaos_start.c"
 #define NOKICLIFFS_HALL_START DIR + "/rooms/hall_of_balance/hall_of_balance_start.c"
 #define NOKICLIFFS_DEN_START DIR + "/rooms/den_of_chaos/den_of_chaos_start.c"
@@ -17,7 +15,7 @@
 #define TELL_ROOM(o, str) o->query_environment()->tell_room(o, str)
 #define WIZHAT_COST 10
 #define NOKICLIFFS_WEAPONS_DIR DIR + "/obj/weapons"
-#define NOKICLIFFS_ARMOURS_DIR DIR + "/obj/armours"
+#define NOKICLIFFS_ARMORS_DIR DIR + "/obj/armors"
 #define NOKICLIFFS_MONSTERS_DIR DIR + "/monsters"
 #define NOKICLIFFS_BRAIN_GUARD NOKICLIFFS_MONSTERS_DIR + "/brain_guard.c"
 #define NOKICLIFFS_SHARD_QUEST "BalanceQuest"
@@ -51,3 +49,4 @@
 #define DEFAULT_RESTOCK_DELAY 7000
 #define NOKICLIFFS_ROOT DIR + "/lib/root"
 #define DEFAULT_SPOIL_INTERVAL 1800
+#define MONEY_MAKER DIR + "/lib/money_maker"

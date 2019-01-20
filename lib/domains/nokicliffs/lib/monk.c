@@ -4,9 +4,9 @@ inherit "/std/monster";
 
 static nomask void clothe(void) {
    equip_monster(({
-      NOKICLIFFS_ARMOURS_DIR + "/monk_robe",
-      NOKICLIFFS_ARMOURS_DIR + "/monk_sandals",
-      NOKICLIFFS_ARMOURS_DIR + "/rope_belt"
+      NOKICLIFFS_ARMORS_DIR + "/monk_robe",
+      NOKICLIFFS_ARMORS_DIR + "/monk_sandals",
+      NOKICLIFFS_ARMORS_DIR + "/rope_belt"
    }));
 }
 

@@ -46,7 +46,7 @@ void outside_message(string str) {
          "balance as " + this_player()->query_Name() +
          " brings the shards of " +
          "law and chaos in her presence.");
-      write("Iustitia shimmers with balance you deliver the shards of " + 
+      write("Iustitia shimmers with balance as you deliver the shards of " +
          "law and chaos to her.");
       write("You have completed the Quest for Balance. Congratulations, " +
          "champion.");

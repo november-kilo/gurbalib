@@ -9,7 +9,7 @@ void setup(void) {
    set_short("A rejuvination potion");
    set_long("The rejuvination potion is in a " +
       "small round glass bottle with a cork stopper. " +
-      "The potion is a swirling thick lavender coloured " +
+      "The potion is a swirling thick lavender colored " +
       "liquid, which is quite viscuous but drinkable. " +
       "You should only " +
       "drink this when you need full body, " +

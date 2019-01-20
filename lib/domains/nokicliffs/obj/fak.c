@@ -5,11 +5,11 @@ inherit "/std/object";
 inherit NOKICLIFFS_HEALING_LIB;
 inherit DIR + "/lib/reloadable";
 
-string query_short() {
+string query_short(void) {
    return "A first aid kit [" + query_charges() + "]";
 }
 
-string query_long() {
+string query_long(void) {
    int i;
    i = query_charges();
 

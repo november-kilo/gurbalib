@@ -16,10 +16,10 @@ private void add_lawbringer(void) {
 
 private void arm(void) {
    equip_monster(({
-      NOKICLIFFS_ARMOURS_DIR + "/crown",
-      NOKICLIFFS_ARMOURS_DIR + "/leather_gloves",
-      NOKICLIFFS_ARMOURS_DIR + "/cuirass",
-      NOKICLIFFS_ARMOURS_DIR + "/tower_shield",
+      NOKICLIFFS_ARMORS_DIR + "/crown",
+      NOKICLIFFS_ARMORS_DIR + "/leather_gloves",
+      NOKICLIFFS_ARMORS_DIR + "/cuirass",
+      NOKICLIFFS_ARMORS_DIR + "/tower_shield",
       NOKICLIFFS_WEAPONS_DIR + "/ataghan",
    }));
    add_lawbringer();

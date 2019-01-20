@@ -11,7 +11,7 @@ void setup(void) {
       "permanent demonic snarl revealing disgusting brown " +
       "teeth. Protruding from his forehead are two large " +
       "slightly curved horns. His skin is a deep blood red " +
-      "colour. He is clearly not pleased by your " +
+      "color. He is clearly not pleased by your " +
       "presence here so close to his master, the brain.");
    set_race("demon");
    set_level(40);
