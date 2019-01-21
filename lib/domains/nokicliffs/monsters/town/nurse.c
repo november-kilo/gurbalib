@@ -54,7 +54,7 @@ void setup(void) {
    set_gender("female");
    set_level(1);
    set_will_buy(0);
-   add_item(DIR + "/obj/fak.c", 20);
-   add_item(DIR + "/obj/rejuv_potion", 5);
    add_item(DIR + "/obj/endurance_potion", 10);
+   add_item(DIR + "/obj/fak.c", 20);
+   add_item(DIR + "/obj/mana_potion.c", 10);
 }
