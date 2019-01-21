@@ -36,7 +36,12 @@ int activate_cmd(string str) {
    }
    if (empty_str(str)) {
       write("You can 'activate' the following pocket dimensions: " +
-         "abbey, den of chaos, doomspire, hall of balance, murky mists.\n" +
+         "\n\tabbey\n" +
+         "\n\tden of chaos\n" +
+         "\n\tdoomspire\n" +
+         "\n\thall of balance\n" +
+         "\n\toak grove\n" +
+         "\n\tmurky mists\n" +
          "For instance, to activate the den of " +
          "chaos pocket dimension, use command: " +
          "activate den of chaos");
@@ -45,6 +50,8 @@ int activate_cmd(string str) {
 
    if (lowercase(str) == "doomspire") {
       this_player()->move(NOKICLIFFS_DOOMSPIRE_START);
+   } else if (lowercase(str) == "oak grove") {
+      this_player()->move(NOKICLIFFS_OAK_GROVE);
    } else if (lowercase(str) == "abbey") {
       this_player()->move(NOKICLIFFS_ABBEY_START);
    } else if (lowercase(str) == "den of chaos") {
