@@ -44,7 +44,7 @@ string query_long(void) {
    str = ::query_long();
    sz = sizeof(affix_names);
    if (sz) {
-      str += "\nAffix" + (sz != 1 ? "es" : "") + ":";
+      str += "\nAffixed item" + (sz != 1 ? "s" : "") + ":";
       for (i = 0; i < sz; i++) {
          str += " '" + affix_names[i] + "'";
       }

@@ -2,7 +2,7 @@
 
 inherit DIR + "/lib/room";
 
-int cmd_affixes(string str) {
+int cmd_affixing(string str) {
    object smith;
 
    smith = this_object()->present("noki town smith");
@@ -117,10 +117,14 @@ int cmd_remove(string str) {
       return 1;
    }
 
-   if (str == "affix" ||
+   if (strstr(str, "affix") > -1 &&
          sscanf(str, "affix %s from %s", what, on_what) != 2) {
       smith->respond("say For instance, 'remove affix emerald from crown'.");
       return 1;
+   }
+
+   if (sscanf(str, "affix %s from %s", what, on_what) != 2) {
+      return 0;
    }
 
    target = this_player()->present(on_what);
@@ -160,16 +164,19 @@ void setup(void) {
       "working in the back room fill the smithy's place. " +
       "If the smith is about, he can affix certain items to " +
       "equipment which imbues the equipment with special power. " +
-      "\n\tTo find out what the smithy knows, type 'affixes'." +
-      "\n\tTo have an item affixed, type 'add <affixable> to <item>'. " +
-      "\n\tTo have an affix removed, type " +
-      "'remove <affixable> from <item>'.");
+      "\n\tTo find out what the smithy knows, type 'affixing'." +
+      "\n\tTo affix an item, type " +
+      "'affix add <item> to <affixable>'. " +
+      "\n\tTo remove an item, type " +
+      "'remove affix <item> from <affixable>'." +
+      "\n\tTo use an affixed item, type " +
+      "'touch <item> on <affixable'.");
 
    set_exits(([ "south" : DIR + "/rooms/town/square_north.c" ]));
 
    set_objects(NOKICLIFFS_TOWN_SMITH);
 
-   add_action("cmd_affixes", "affixes");
+   add_action("cmd_affixing", "affixing");
    add_action("cmd_add", "add");
    add_action("cmd_remove", "remove");
 }

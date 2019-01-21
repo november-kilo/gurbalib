@@ -2,7 +2,7 @@
 
 inherit armor "/std/armor";
 inherit affixable DIR + "/lib/affixable";
-inherit DIR + "/lib/affixables/rescue_effect";
+inherit DIR + "/lib/effects_for_affixables/rescue_effect";
 
 int affix_effect(string affix_name) {
    if (!has_affixes()) {
