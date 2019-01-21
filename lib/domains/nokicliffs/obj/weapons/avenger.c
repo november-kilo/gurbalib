@@ -37,7 +37,7 @@ void setup(void) {
    add_action("adjust_hit_bonus_cmd", "hb");
    add_action("consider_cmd", "consider");
    add_action("bump_hit_points_cmd", "maxhp");
-   set_materials(({"silver", "holy"}));
+   set_materials(({"silver"}));
    add_bane("holy");
 }
 

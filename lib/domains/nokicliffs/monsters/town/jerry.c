@@ -4,7 +4,7 @@ inherit DIR + "/lib/monster";
 inherit "/std/modules/m_triggers";
 
 static string *acts;
-static int     index;
+static int index;
 
 void setup(void) {
    set_name("jerry");

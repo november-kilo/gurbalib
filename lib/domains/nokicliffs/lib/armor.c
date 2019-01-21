@@ -1,4 +1,26 @@
-inherit "/std/armor";
+#include "../domain.h"
+
+inherit armor "/std/armor";
+inherit affixable DIR + "/lib/affixable";
+inherit DIR + "/lib/affixables/rescue_effect";
+
+int affix_effect(string affix_name) {
+   if (!has_affixes()) {
+      return 1;
+   }
+
+   if (!query_worn()) {
+      write("You must wear it first.");
+      return 2;
+   }
+
+   if (affix_name == "emerald" && has_affix("emerald")) {
+      affix_rescue_effect(this_object()->query_environment());
+      return 3;
+   }
+
+   return 0;
+}
 
 void set_armor_stats(string slot, int ac, int value, int size, int weight) {
    set_slot(slot);
@@ -9,7 +31,7 @@ void set_armor_stats(string slot, int ac, int value, int size, int weight) {
 }
 
 void set_helmet(void) {
-   set_armor_stats("head", 3, 30, 1, 3);
+   set_armor_stats("head", 2, 20, 1, 2);
 }
 
 void set_heavy(void) {
@@ -29,9 +51,11 @@ void set_ultra_light(void) {
 }
 
 void create(void) {
-   ::create();
+   armor::create();
+   affixable::create();
    set_ac(1);
    set_value(10);
    set_size(1);
    set_weight(1);
+   enable_affixes();
 }

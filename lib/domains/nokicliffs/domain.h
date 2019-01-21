@@ -3,6 +3,7 @@
 #define NOKICLIFFS_AREA "noki-cliffs"
 #define NOKICLIFFS_START DIR + "/rooms/start.c"
 #define NOKICLIFFS_VOID DIR + "/rooms/void.c"
+#define NOCLIFFS_TOWN_SQUARE_MIDDLE DIR + "/rooms/town/square_middle.c"
 #define NOKICLIFFS_ABBEY_START DIR + "/rooms/abbey/abbey_start.c"
 #define NOKICLIFFS_DEN_START DIR + "/rooms/den_of_chaos/den_of_chaos_start.c"
 #define NOKICLIFFS_DOOMSPIRE_START DIR + "/rooms/doomspire/doomspire_start.c"
@@ -47,6 +48,7 @@
 #define NOKICLIFFS_TOWN_SHOP_KEEPER DIR + "/monsters/town/bridgette.c"
 #define NOKICLIFFS_TOWN_SHOP_REGULAR DIR + "/monsters/town/jerry.c"
 #define NOKICLIFFS_TOWN_NURSE DIR + "/monsters/town/nurse.c"
+#define NOKICLIFFS_TOWN_SMITH DIR + "/monsters/town/smith.c"
 #define DEFAULT_RESTOCK_DELAY 7000
 #define NOKICLIFFS_ROOT DIR + "/lib/root"
 #define DEFAULT_SPOIL_INTERVAL 1800
@@ -57,3 +59,6 @@
 #define NOKICLIFFS_MONSTER_LEVEL 20
 #define NOKICLIFFS_UNARMED 250
 #define NOKICLIFFS_DEFENSE 200
+#define NOKICLIFFS_AFFIXES_NO 0
+#define NOKICLIFFS_AFFIXES_OK 1
+#define NOKICLIFFS_AFFIXES_FULL 2
