@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/weapons/sword";
+inherit DIR + "/lib/sword";
 
 void setup(void) {
    ::setup();
@@ -12,6 +12,5 @@ void setup(void) {
    set_long("This two-handed claymore has seen much use, " +
             "but is in wonderful fighting condition.");
    set_wield_type("dual");
-   set_combat_stats(10, 15, 10);
    set_sword_skill("large");
 }

@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/weapons/axe";
+inherit DIR + "/lib/axe";
 
 void setup(void) {
    ::setup();
@@ -10,5 +10,4 @@ void setup(void) {
    set_adj("hand");
    set_short("A hand axe");
    set_long("The hand axe is commonly wielded by rangers.");
-   set_combat_stats(10, 15, 10);
 }

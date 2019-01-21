@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/weapons/axe";
+inherit DIR + "/lib/axe";
 
 void setup(void) {
    ::setup();
@@ -12,6 +12,5 @@ void setup(void) {
       "better days, but do not be fooled as it will still get " +
       "the job done.");
    set_wield_type("dual");
-   set_combat_stats(10, 15, 10);
    set_axe_skill("large");
 }

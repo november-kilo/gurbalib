@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/weapons/sword";
+inherit DIR + "/lib/sword";
 
 void setup(void) {
    ::setup();
@@ -13,6 +13,5 @@ void setup(void) {
       "through some serious bouts of adventuring, yet it " +
       "remains in superb condition.");
    set_wield_type("dual");
-   set_combat_stats(10, 15, 10);
    set_sword_skill("large");
 }

@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/weapons/blunt";
+inherit DIR + "/lib/blunt";
 
 void setup(void) {
    ::setup();
@@ -10,6 +10,5 @@ void setup(void) {
    set_long("The baton has a Noki Town bank emblem " +
             "engraved on it. It is the standard issue weapon " +
             "for the bank guards.");
-   set_combat_stats(10, 15, 10);
 }
 

@@ -1,6 +1,6 @@
 #include "../../domain.h"
 
-inherit "/std/weapons/blunt";
+inherit DIR + "/lib/blunt";
 
 void setup(void) {
    string *a;

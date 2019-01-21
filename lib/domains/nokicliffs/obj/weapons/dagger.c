@@ -1,4 +1,6 @@
-inherit "/std/weapons/sword";
+#include "../../domain.h"
+
+inherit DIR + "/lib/sword";
 
 void setup(void) {
    ::setup();
@@ -6,6 +8,5 @@ void setup(void) {
    set_short("A dagger");
    set_adj("simple");
    set_long("A simple dagger for the unenthusiastic combatant.");
-   set_combat_stats(1, 300, 10);
    set_sword_skill("small");
 }

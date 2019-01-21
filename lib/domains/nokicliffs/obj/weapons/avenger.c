@@ -1,4 +1,6 @@
-inherit "/std/weapons/sword";
+#include "../../domain.h"
+
+inherit DIR + "/lib/sword";
 
 private string format_stats_of_weapon(void) {
    return "Max: " + query_max_damage() + ", hit: +" + query_hit_bonus();
