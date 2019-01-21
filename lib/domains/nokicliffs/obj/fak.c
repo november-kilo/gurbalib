@@ -6,7 +6,8 @@ inherit NOKICLIFFS_HEALING_LIB;
 inherit DIR + "/lib/reloadable";
 
 string query_short(void) {
-   return "A first aid kit [" + query_charges() + "]";
+   return "A first aid kit [" + query_charges() + " use" +
+         (query_charges() != 1 ? "s": "") + " remain]";
 }
 
 string query_long(void) {
@@ -16,14 +17,17 @@ string query_long(void) {
    return "A first kit with enough supplies for " + i +
       " more use" + (i != 1 ? "s" : "") + ". You can " +
       "'bandage' yourself or a comrade to help recovery " +
-      "from physical injury.";
+      "from physical injury. It may be reloaded by any " +
+      "a suitable medical clinic nurse or doctor; when " +
+      "you buy a first aid kit, you are charged only the " +
+      "cost to refill your kit.";
 }
 
 void setup(void) {
    set_id("first aid kit");
-   add_id("kit");
+   add_ids("kit", "fak");
    set_gettable(1);
-   set_value(200);
+   set_value(50);
    set_weight(1);
    set_max_charges(10);
    set_charges(10);

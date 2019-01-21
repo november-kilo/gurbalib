@@ -6,9 +6,12 @@ void setup(void) {
    set_short("Noki Town public bath");
    set_long("You are at Noki Town's public bath. " +
       "Go east to return to " +
-      "to the town square.");
+      "to the town square. To the west is a small " +
+      "medical clinic, which offers minimal but " +
+      "useful medical services.");
    set_exits(([
-      "east" : DIR + "/rooms/town/self_storage.c"
+      "east" : DIR + "/rooms/town/self_storage.c",
+      "west" : DIR + "/rooms/town/clinic.c"
    ]));
 }
 

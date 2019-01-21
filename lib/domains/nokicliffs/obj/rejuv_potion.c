@@ -5,6 +5,7 @@ inherit NOKICLIFFS_HEALING_LIB;
 
 void setup(void) {
    set_id("rejuvination potion");
+   set_adj("rejuvination");
    add_ids("potion");
    set_short("A rejuvination potion");
    set_long("The rejuvination potion is in a " +
@@ -16,17 +17,15 @@ void setup(void) {
       "mind, and endurance healing.");
    set_eatable(1);
    set_gettable(1);
-   set_value(2);
+   set_value(200);
    set_weight(1);
 }
 
 int do_eat(void) {
-   int    max_hp, max_mana, max_end;
-
+   int max_hp, max_mana, max_end;
 
    set_doctor(this_object());
    set_patient(this_player());
-   patient = this_player();
    max_hp = patient->query_max_hp();
    max_mana = patient->query_max_mana();
    max_end = patient->query_max_end();

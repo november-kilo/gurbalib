@@ -46,6 +46,7 @@
 #define TORCH TWOFOURFIVE_DIR + "/obj/torch"
 #define NOKICLIFFS_TOWN_SHOP_KEEPER DIR + "/monsters/town/bridgette.c"
 #define NOKICLIFFS_TOWN_SHOP_REGULAR DIR + "/monsters/town/jerry.c"
+#define NOKICLIFFS_TOWN_NURSE DIR + "/monsters/town/nurse.c"
 #define DEFAULT_RESTOCK_DELAY 7000
 #define NOKICLIFFS_ROOT DIR + "/lib/root"
 #define DEFAULT_SPOIL_INTERVAL 1800
