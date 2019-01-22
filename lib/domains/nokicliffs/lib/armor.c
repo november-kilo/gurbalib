@@ -2,7 +2,32 @@
 
 inherit armor "/std/armor";
 inherit affixable DIR + "/lib/affixable";
-inherit DIR + "/lib/effects_for_affixables/rescue_effect";
+inherit NOKICLIFFS_RESCUE_EFFECT_LIB;
+inherit NOKICLIFFS_LIGHT_EFFECT_LIB;
+
+private int should_do_affix_effect(string affix_name, string str) {
+   return affix_name == str && has_affix(str);
+}
+
+string query_short() {
+   string str;
+
+   str = ::query_short();
+   if (query_lit()) {
+      str += " %^YELLOW%^[lit]%^RESET%^";
+   }
+
+   return str;
+}
+
+void after_unwear(object player, string cmd) {
+   if (player && query_lit()) {
+      player->simple_action("$N $vcause the " +
+         "the light to go out on $p " + query_id() + ".", player);
+   }
+
+   set_lit(0);
+}
 
 int affix_effect(string affix_name) {
    if (!has_affixes()) {
@@ -14,9 +39,16 @@ int affix_effect(string affix_name) {
       return 2;
    }
 
-   if (affix_name == "emerald" && has_affix("emerald")) {
-      affix_rescue_effect(this_object()->query_environment());
+   if (should_do_affix_effect("emerald", affix_name)) {
+      affix_rescue_effect(query_id(), affix_name,
+            this_object()->query_environment());
       return 3;
+   }
+
+   if (should_do_affix_effect("topaz", affix_name)) {
+      affix_light_effect(query_id(), affix_name,
+            this_object()->query_environment());
+      return 4;
    }
 
    return 0;

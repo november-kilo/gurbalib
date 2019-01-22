@@ -45,6 +45,7 @@
 #define RIC_MEAL TWOFOURFIVE_DIR + "/obj/ric_meal"
 #define SPECIAL TWOFOURFIVE_DIR + "/obj/special"
 #define TORCH TWOFOURFIVE_DIR + "/obj/torch"
+#define NOKICLIFFS_TOWN_ONE_ARMED_BANDIT DIR + "/obj/town/one_armed_bandit.c"
 #define NOKICLIFFS_TOWN_SHOP_KEEPER DIR + "/monsters/town/bridgette.c"
 #define NOKICLIFFS_TOWN_SHOP_REGULAR DIR + "/monsters/town/jerry.c"
 #define NOKICLIFFS_TOWN_NURSE DIR + "/monsters/town/nurse.c"
@@ -62,3 +63,6 @@
 #define NOKICLIFFS_AFFIXES_NO 0
 #define NOKICLIFFS_AFFIXES_OK 1
 #define NOKICLIFFS_AFFIXES_FULL 2
+#define NOKICLIFFS_FIXABLE_EFFECTS_DIR DIR + "/lib/effects_for_affixables"
+#define NOKICLIFFS_RESCUE_EFFECT_LIB NOKICLIFFS_FIXABLE_EFFECTS_DIR + "/rescue_effect"
+#define NOKICLIFFS_LIGHT_EFFECT_LIB NOKICLIFFS_FIXABLE_EFFECTS_DIR + "/light_effect"

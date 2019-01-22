@@ -11,8 +11,9 @@ int cmd_affixing(string str) {
       return 1;
    }
 
-   smith->respond("say I know how to affix emeralds to your " +
-      "equipment. If for some reason I can't do that, " +
+   smith->respond("say I know how to affix "+
+      "emeralds and topazes " +
+      "to your equipment. If for some reason I can't do that, " +
       "I'll let you know. " +
       "But I'm always learning new things. " +
       "Feel free to check back another time to see if I've " +

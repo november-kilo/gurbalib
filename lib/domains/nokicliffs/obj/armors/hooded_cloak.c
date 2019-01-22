@@ -32,6 +32,8 @@ void after_wear(object player) {
 }
 
 void after_unwear(object player, string cmd) {
+   ::after_unwear(player, cmd);
+
    if (player && cloak_powered) {
       player->message("The cloak powers down.");
    }

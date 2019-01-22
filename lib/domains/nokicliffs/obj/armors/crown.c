@@ -20,7 +20,7 @@ int affix_effect(string affix_name) {
 
 void add_affix_side_effect(string affix_name) {
    if (affix_name == "sigil") {
-      set_short("A metal crown glowing with the aura of a champion");
+      set_short("A metal crown with a champion's halo");
    }
 }
 
@@ -51,6 +51,8 @@ void after_wear(object player) {
 }
 
 void after_unwear(object player, string cmd) {
+   ::after_unwear(player, cmd);
+
    if (!player) {
       return;
    }

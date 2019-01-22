@@ -37,6 +37,8 @@ void after_wear(object player) {
 }
 
 void after_unwear(object player, string cmd) {
+   ::after_unwear(player, cmd);
+
    magical_properties_active = 0;
 
    if (!player) {

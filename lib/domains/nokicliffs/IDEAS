@@ -1,4 +1,5 @@
 /* XXX */
+* Fix light/dark rooms, lighting
 * Bane/vulnerabilities completed
 * Put command - handle coins
 * Use player attributes more (bash door, NPC reactions)
