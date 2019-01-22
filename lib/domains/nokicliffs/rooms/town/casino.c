@@ -17,4 +17,12 @@ void setup(void) {
    ]));
 
    set_objects(NOKICLIFFS_TOWN_ONE_ARMED_BANDIT);
+
+   add_item("grand staircase", "It sure is grand. It was " +
+      "built by Noki Town's finest carpenters, builders, and " +
+      "artisans.");
+   add_item("staircase", "It's a grand staircase built by Noki " +
+      "Town's finest carpenters, builders, and artisans.");
+   add_item("villagers", "The villagers are enjoying the casino.");
+   add_item("transients", "The transients are enjoying the casino.");
 }

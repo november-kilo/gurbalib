@@ -13,7 +13,11 @@ private void roll_wheel(string slot, string wheel_sound) {
 }
 
 void analyse_results(object player) {
-   player->simple_action("$N $vlook forlorn.");
+   if (player->query_environment() == this_object()->query_environment()) {
+      player->simple_action("$N $vfeel swindled.");
+   } else {
+      TELL_ROOM(this_object(), "Game Over.");
+   }
    being_played = FALSE;
 }
 

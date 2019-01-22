@@ -12,7 +12,7 @@ void do_extra_actions(void) {
       if (is_fighting()) {
          respond("emote punches its jaw back into its place.");
       } else {
-         respond(acts[random(sizeof(acts))]);
+         respond(random_element(acts));
          count = 0;
       }
    }

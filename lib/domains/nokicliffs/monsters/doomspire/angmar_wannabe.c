@@ -74,7 +74,7 @@ void do_extra_actions(void) {
          if (ob && !ob->is_inert()) {
             return;
          }
-         respond(acts[random(sizeof(acts))]);
+         respond(random_element(acts));
          count = 0;
       }
    }

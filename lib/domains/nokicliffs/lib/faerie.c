@@ -12,7 +12,7 @@ void do_extra_actions(void) {
       count = 0;
       if (!is_fighting()) {
          if (random(2)) {
-            respond(acts[random(sizeof(acts))]);
+            respond(random_element(acts));
          }
       }
    }
