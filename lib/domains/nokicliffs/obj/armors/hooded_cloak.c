@@ -7,7 +7,7 @@ inherit DIR + "/lib/armor";
 
 static int cloak_powered;
 
-int is_cloak_powered() {
+int is_cloak_powered(void) {
    return cloak_powered;
 }
 

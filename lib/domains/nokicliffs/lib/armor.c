@@ -9,7 +9,7 @@ private int should_do_affix_effect(string affix_name, string str) {
    return affix_name == str && has_affix(str);
 }
 
-string query_short() {
+string query_short(void) {
    string str;
 
    str = ::query_short();
