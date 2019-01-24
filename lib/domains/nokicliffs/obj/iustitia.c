@@ -22,7 +22,7 @@ private void find_balance(object *balanced) {
    int i, dim;
 
    for (i = 0, dim = sizeof(balanced); i < dim; i++) {
-      destruct_object(balanced[i]);
+      balanced[i]->destruct();
    }
 }
 

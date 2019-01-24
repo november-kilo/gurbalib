@@ -10,7 +10,7 @@ int query_busy_right_now(void) {
 
 void work_done(object affixable, object target, int coins, object client) {
    target->add_affix(affixable->query_id());
-   destruct_object(affixable);
+   affixable->destruct();
    respond("emote smiles proudly.");
    respond("say There we go. All done.");
    respond("give " + target->query_id() + " to " + client->query_name());

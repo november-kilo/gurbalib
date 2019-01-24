@@ -15,13 +15,13 @@ void monster_died(void) {
    if (automaton && !automaton->is_inert()) {
       TELL_ROOM(this_object(), "The area glows with necromantic fury.");
       TELL_ROOM(this_object(), "The animated automaton melts into the void.");
-      destruct_object(automaton);
+      automaton->destruct();
    }
 }
 
 void bring_frankenstein_to_life(object brain, object automaton) {
-   destruct_object(brain);
-   destruct_object(automaton);
+   brain->destruct();
+   automaton->destruct();
 
    respond("say It's alive! It's ALIVE!");
    respond("emote cackles megalomaniacally.");
@@ -46,7 +46,7 @@ private void gives(string str) {
       if (!brain || !automaton || !automaton->is_inert()) {
          respond("say I'll find another use later. " +
             "But I always have a use for brains.");
-         destruct_object(brain);
+         brain->destruct();
 
          return;
       }

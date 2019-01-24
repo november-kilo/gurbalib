@@ -14,7 +14,7 @@ int do_drop_sea_shell(string str) {
             return 1;
          }
 
-         destruct_object(shell);
+         shell->destruct();
          this_player()->targeted_action("$N $vtoss a pretty sea shell " +
             "into the village fountain. *plunk*", this_player());
 
